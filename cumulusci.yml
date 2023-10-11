@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.76.0'
+project:
+    name: BrendanProTestData
+    package:
+        name: cci_project
+        api_version: '59.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/BrendanProTestData/tests
+            options:
+                outputdir: robot/BrendanProTestData/results
+
+    robot_testdoc:
+        options:
+            path: robot/BrendanProTestData/tests
+            output: robot/BrendanProTestData/doc/BrendanProTestData_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
